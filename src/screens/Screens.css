@@ -1,0 +1,260 @@
+/* --- Core Layout Containers --- */
+.screen-container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: 0.75rem 0.75rem calc(0.75rem + env(safe-area-inset-bottom, 0px));
+  position: relative;
+  gap: 0.75rem;
+  scroll-behavior: smooth;
+}
+
+/* Hide scrollbar for a cleaner mobile-app feel */
+.screen-container::-webkit-scrollbar {
+  display: none;
+}
+
+/* --- Sticky Top Information Section --- */
+.top-info-section {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  padding: calc(0.25rem + env(safe-area-inset-top, 0px)) 0.1rem 0;
+}
+
+/* Category chip (e.g., "Outlet Survey") */
+.top-info-chip {
+  width: fit-content;
+  border-radius: 0.5rem;
+  border: 1px solid rgba(125, 211, 252, 0.8);
+  background: rgba(255, 255, 255, 0.72);
+  padding: 0.35rem 0.6rem;
+  font-size: 0.65rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #0369a1;
+  backdrop-filter: blur(12px);
+}
+
+.top-info-header {
+  font-size: 1.35rem;
+  line-height: 1.1;
+  font-weight: 900;
+  color: #10233f;
+}
+
+.top-info-surveyor {
+  font-size: 0.85rem;
+  color: #5f728c;
+  font-weight: 500;
+}
+
+.top-info-surveyor strong {
+  color: #10233f;
+}
+
+.centered-content-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  z-index: 10;
+  gap: 0.75rem;
+}
+
+/* --- Main Glassmorphism Cards --- */
+.screen-card {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.96);
+  padding: 1rem;
+  border-radius: 0.5rem;
+  box-shadow:
+    0 24px 54px -30px rgba(15, 35, 63, 0.32),
+    0 12px 24px -18px rgba(15, 35, 63, 0.16);
+  border: 1px solid rgba(255, 255, 255, 0.7);
+}
+
+.screen-header {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  margin-bottom: 1rem;
+}
+
+.screen-title {
+  font-size: 1.35rem;
+  line-height: 1.12;
+  font-weight: 900;
+  color: #10233f;
+}
+
+.screen-subtitle {
+  font-size: 0.85rem;
+  line-height: 1.45;
+  color: #5f728c;
+}
+
+/* --- Metadata UI Elements (Pills & Status) --- */
+.screen-meta-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  margin-bottom: 0.9rem;
+}
+
+.step-pill,
+.status-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  border-radius: 0.5rem;
+  padding: 0.45rem 0.65rem;
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.step-pill {
+  color: #0f6cbd;
+  background: #edf7ff;
+  border: 1px solid rgba(14, 116, 201, 0.16);
+}
+
+.status-pill {
+  color: #047857;
+  background: #ecfdf5;
+  border: 1px solid rgba(16, 185, 129, 0.18);
+}
+
+.status-dot {
+  width: 0.5rem;
+  height: 0.5rem;
+  background: #10b981;
+  border-radius: 999px;
+  box-shadow: 0 0 0.65rem rgba(16, 185, 129, 0.55);
+}
+
+/* --- Form Layouts --- */
+.form-container,
+.form-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  width: 100%;
+}
+
+/* --- Decorative / Context Cards --- */
+.support-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.85rem;
+  padding: 0.95rem 1rem;
+  border-radius: 0.5rem;
+  background: linear-gradient(135deg, rgba(239, 246, 255, 0.95), rgba(247, 251, 255, 0.92));
+  border: 1px solid rgba(186, 230, 253, 0.85);
+}
+
+.support-icon {
+  flex-shrink: 0;
+  width: 2.4rem;
+  height: 2.4rem;
+  border-radius: 1rem;
+  display: grid;
+  place-items: center;
+  background: linear-gradient(135deg, #0284c7, #38bdf8);
+  color: white;
+  box-shadow: 0 0.8rem 1.5rem -1rem rgba(14, 116, 201, 0.8);
+}
+
+.support-content h3 {
+  font-size: 0.9rem;
+  font-weight: 800;
+  color: #10233f;
+}
+
+.support-content p {
+  margin-top: 0.2rem;
+  font-size: 0.82rem;
+  line-height: 1.5;
+  color: #5f728c;
+}
+
+.support-content strong {
+  color: #10233f;
+}
+
+/* --- Action Button Layouts --- */
+.action-area,
+.action-stack {
+  margin-top: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  width: 100%;
+  padding-top: 0.75rem;
+  padding-bottom: calc(0.5rem + env(safe-area-inset-bottom, 0px));
+}
+
+/* Non-primary buttons (e.g., "Change Surveyor") */
+.secondary-action {
+  min-height: 3rem;
+  border: none;
+  background: rgba(255, 255, 255, 0.72);
+  border-radius: 0.5rem;
+  color: #0f6cbd;
+  font-size: 0.92rem;
+  font-weight: 700;
+  box-shadow: 0 14px 26px -22px rgba(15, 35, 63, 0.45);
+  transition: background-color 180ms ease, color 180ms ease, transform 180ms ease;
+}
+
+.secondary-action:hover {
+  background: rgba(255, 255, 255, 0.92);
+}
+
+.secondary-action:active {
+  transform: scale(0.99);
+}
+
+/* Global error/validation banner style */
+.error-banner {
+  padding: 0.9rem 1rem;
+  border-radius: 0.5rem;
+  background: rgba(255, 241, 242, 0.92);
+  border: 1px solid rgba(251, 113, 133, 0.22);
+  color: #be123c;
+  font-size: 0.85rem;
+  line-height: 1.45;
+  font-weight: 600;
+}
+
+/* --- Responsiveness for Tablets/Large Screens --- */
+@media (min-width: 420px) {
+  .screen-container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .screen-card {
+    padding: 1.1rem;
+  }
+}
+
+/* --- Premium Animations --- */
+@keyframes slideUpFade {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-premium-in {
+  animation: slideUpFade 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}

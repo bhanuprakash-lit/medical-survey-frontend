@@ -1,0 +1,56 @@
+/* 
+  Custom Animations for the Medical Web Application
+  These animations provide a premium "native app" feel with smooth transitions.
+*/
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slide-in-from-bottom {
+  from {
+    transform: translateY(1.5rem);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* 
+  Core animation utility classes.
+  - animate-in: Base class to enable animations.
+  - fade-in: Basic opacity transition.
+  - slide-in-bottom: Combines upward movement with opacity for a modern entry.
+*/
+
+.animate-in {
+  animation-duration: 0.6s;
+  animation-timing-function: cubic-bezier(0.16, 1, 0.3, 1); /* Sharp out, smooth in */
+  animation-fill-mode: both;
+}
+
+.fade-in {
+  animation-name: fade-in;
+}
+
+.slide-in-bottom {
+  animation-name: slide-in-from-bottom;
+}
+
+/* 
+  Staggered delays for a more dynamic UI entry.
+*/
+.delay-100 {
+  animation-delay: 0.1s;
+}
+
+.delay-200 {
+  animation-delay: 0.2s;
+}

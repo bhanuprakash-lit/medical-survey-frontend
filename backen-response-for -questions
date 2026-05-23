@@ -1,0 +1,1192 @@
+[
+    {
+        "stage": "1. Outlet profile & business model",
+        "questions": [
+            {
+                "id": 1,
+                "question_code": "P-S01",
+                "question_text": "What type of pharmacy is this outlet?",
+                "question_type": "Single select",
+                "stage": "1. Outlet profile & business model",
+                "section_theme": "Store Profile",
+                "question_order": 1,
+                "options": [
+                    {
+                        "id": 1,
+                        "option_text": "Standalone retail",
+                        "option_order": 1
+                    },
+                    {
+                        "id": 2,
+                        "option_text": "Chain pharmacy",
+                        "option_order": 2
+                    },
+                    {
+                        "id": 3,
+                        "option_text": "Clinic-attached",
+                        "option_order": 3
+                    },
+                    {
+                        "id": 4,
+                        "option_text": "Hospital pharmacy",
+                        "option_order": 4
+                    },
+                    {
+                        "id": 5,
+                        "option_text": "Wholesale-retail mixed",
+                        "option_order": 5
+                    },
+                    {
+                        "id": 6,
+                        "option_text": "Other",
+                        "option_order": 6
+                    }
+                ]
+            },
+            {
+                "id": 2,
+                "question_code": "P-S02",
+                "question_text": "How many years has this pharmacy been operating?",
+                "question_type": "Single select",
+                "stage": "1. Outlet profile & business model",
+                "section_theme": "Store Profile",
+                "question_order": 2,
+                "options": [
+                    {
+                        "id": 7,
+                        "option_text": "<1 year",
+                        "option_order": 1
+                    },
+                    {
+                        "id": 8,
+                        "option_text": "1–3 years",
+                        "option_order": 2
+                    },
+                    {
+                        "id": 9,
+                        "option_text": "4–7 years",
+                        "option_order": 3
+                    },
+                    {
+                        "id": 10,
+                        "option_text": "8–15 years",
+                        "option_order": 4
+                    },
+                    {
+                        "id": 11,
+                        "option_text": "15+ years",
+                        "option_order": 5
+                    }
+                ]
+            },
+            {
+                "id": 3,
+                "question_code": "P-S03",
+                "question_text": "How many people work in the pharmacy?",
+                "question_type": "Single select",
+                "stage": "1. Outlet profile & business model",
+                "section_theme": "Store Profile",
+                "question_order": 3,
+                "options": [
+                    {
+                        "id": 12,
+                        "option_text": "1",
+                        "option_order": 1
+                    },
+                    {
+                        "id": 13,
+                        "option_text": "2–3",
+                        "option_order": 2
+                    },
+                    {
+                        "id": 14,
+                        "option_text": "4–5",
+                        "option_order": 3
+                    },
+                    {
+                        "id": 15,
+                        "option_text": "6–10",
+                        "option_order": 4
+                    },
+                    {
+                        "id": 16,
+                        "option_text": "10+",
+                        "option_order": 5
+                    }
+                ]
+            },
+            {
+                "id": 4,
+                "question_code": "P-S04",
+                "question_text": "Which sales mix best describes the business?",
+                "question_type": "Single select",
+                "stage": "1. Outlet profile & business model",
+                "section_theme": "Store Profile",
+                "question_order": 4,
+                "options": [
+                    {
+                        "id": 17,
+                        "option_text": "Mostly Rx",
+                        "option_order": 1
+                    },
+                    {
+                        "id": 18,
+                        "option_text": "More Rx than OTC",
+                        "option_order": 2
+                    },
+                    {
+                        "id": 19,
+                        "option_text": "Balanced",
+                        "option_order": 3
+                    },
+                    {
+                        "id": 20,
+                        "option_text": "More OTC than Rx",
+                        "option_order": 4
+                    },
+                    {
+                        "id": 21,
+                        "option_text": "Mostly OTC / wellness",
+                        "option_order": 5
+                    }
+                ]
+            },
+            {
+                "id": 5,
+                "question_code": "P-I01",
+                "question_text": "Walk me through the business model—what categories & customer types matter most?",
+                "question_type": "Open-ended",
+                "stage": "1. Outlet profile & business model",
+                "section_theme": "Business Model & Ordering",
+                "question_order": 5,
+                "options": [
+                    {
+                        "id": 22,
+                        "option_text": "Where do margins come from? What drives repeat visits? | Signal: Profit vs availability trade-offs",
+                        "option_order": 1
+                    }
+                ]
+            },
+            {
+                "id": 6,
+                "question_code": "P-I02",
+                "question_text": "How do you decide what medicines to reorder and how much?",
+                "question_type": "Open-ended",
+                "stage": "1. Outlet profile & business model",
+                "section_theme": "Business Model & Ordering",
+                "question_order": 6,
+                "options": [
+                    {
+                        "id": 23,
+                        "option_text": "What data do you rely on? Memory-based? Distributor-led? | Signal: Core decision model",
+                        "option_order": 1
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "stage": "2. Inventory, expiry & daily stock position",
+        "questions": [
+            {
+                "id": 7,
+                "question_code": "P-S05",
+                "question_text": "How is inventory currently tracked?",
+                "question_type": "Single select",
+                "stage": "2. Inventory, expiry & daily stock position",
+                "section_theme": "Inventory & Expiry",
+                "question_order": 7,
+                "options": [
+                    {
+                        "id": 24,
+                        "option_text": "No formal system",
+                        "option_order": 1
+                    },
+                    {
+                        "id": 25,
+                        "option_text": "Notebook",
+                        "option_order": 2
+                    },
+                    {
+                        "id": 26,
+                        "option_text": "Excel",
+                        "option_order": 3
+                    },
+                    {
+                        "id": 27,
+                        "option_text": "Pharmacy ERP",
+                        "option_order": 4
+                    },
+                    {
+                        "id": 28,
+                        "option_text": "Generic accounting",
+                        "option_order": 5
+                    },
+                    {
+                        "id": 29,
+                        "option_text": "Mixed methods",
+                        "option_order": 6
+                    }
+                ]
+            },
+            {
+                "id": 8,
+                "question_code": "P-S06",
+                "question_text": "How often do stockouts happen for critical medicines?",
+                "question_type": "Single select",
+                "stage": "2. Inventory, expiry & daily stock position",
+                "section_theme": "Inventory & Expiry",
+                "question_order": 8,
+                "options": [
+                    {
+                        "id": 30,
+                        "option_text": "Daily",
+                        "option_order": 1
+                    },
+                    {
+                        "id": 31,
+                        "option_text": "Weekly",
+                        "option_order": 2
+                    },
+                    {
+                        "id": 32,
+                        "option_text": "2–3 times per month",
+                        "option_order": 3
+                    },
+                    {
+                        "id": 33,
+                        "option_text": "Rarely",
+                        "option_order": 4
+                    },
+                    {
+                        "id": 34,
+                        "option_text": "Almost never",
+                        "option_order": 5
+                    }
+                ]
+            },
+            {
+                "id": 9,
+                "question_code": "P-S07",
+                "question_text": "How often do near-expiry or expired medicines create losses?",
+                "question_type": "Single select",
+                "stage": "2. Inventory, expiry & daily stock position",
+                "section_theme": "Inventory & Expiry",
+                "question_order": 9,
+                "options": [
+                    {
+                        "id": 35,
+                        "option_text": "Very often",
+                        "option_order": 1
+                    },
+                    {
+                        "id": 36,
+                        "option_text": "Often",
+                        "option_order": 2
+                    },
+                    {
+                        "id": 37,
+                        "option_text": "Sometimes",
+                        "option_order": 3
+                    },
+                    {
+                        "id": 38,
+                        "option_text": "Rarely",
+                        "option_order": 4
+                    },
+                    {
+                        "id": 39,
+                        "option_text": "Never",
+                        "option_order": 5
+                    }
+                ]
+            },
+            {
+                "id": 10,
+                "question_code": "P-S08",
+                "question_text": "Do you track batch and expiry dates systematically?",
+                "question_type": "Single select",
+                "stage": "2. Inventory, expiry & daily stock position",
+                "section_theme": "Inventory & Expiry",
+                "question_order": 10,
+                "options": [
+                    {
+                        "id": 40,
+                        "option_text": "Yes always",
+                        "option_order": 1
+                    },
+                    {
+                        "id": 41,
+                        "option_text": "Mostly yes",
+                        "option_order": 2
+                    },
+                    {
+                        "id": 42,
+                        "option_text": "Sometimes",
+                        "option_order": 3
+                    },
+                    {
+                        "id": 43,
+                        "option_text": "Rarely",
+                        "option_order": 4
+                    },
+                    {
+                        "id": 44,
+                        "option_text": "No",
+                        "option_order": 5
+                    }
+                ]
+            },
+            {
+                "id": 11,
+                "question_code": "P-S23",
+                "question_text": "How often do you review opening stock, inward, sales, expiry risk and closing stock?",
+                "question_type": "Single select",
+                "stage": "2. Inventory, expiry & daily stock position",
+                "section_theme": "Day-to-Day Stock Position",
+                "question_order": 11,
+                "options": [
+                    {
+                        "id": 45,
+                        "option_text": "Every day",
+                        "option_order": 1
+                    },
+                    {
+                        "id": 46,
+                        "option_text": "2–3 times per week",
+                        "option_order": 2
+                    },
+                    {
+                        "id": 47,
+                        "option_text": "Weekly",
+                        "option_order": 3
+                    },
+                    {
+                        "id": 48,
+                        "option_text": "Only during shortage",
+                        "option_order": 4
+                    },
+                    {
+                        "id": 49,
+                        "option_text": "Rarely",
+                        "option_order": 5
+                    }
+                ]
+            },
+            {
+                "id": 12,
+                "question_code": "P-S24",
+                "question_text": "Which stock-position views are most useful every day?",
+                "question_type": "Multi select",
+                "stage": "2. Inventory, expiry & daily stock position",
+                "section_theme": "Day-to-Day Stock Position",
+                "question_order": 12,
+                "options": [
+                    {
+                        "id": 50,
+                        "option_text": "Critical medicine availability",
+                        "option_order": 1
+                    },
+                    {
+                        "id": 51,
+                        "option_text": "Fast movers",
+                        "option_order": 2
+                    },
+                    {
+                        "id": 52,
+                        "option_text": "Near expiry",
+                        "option_order": 3
+                    },
+                    {
+                        "id": 53,
+                        "option_text": "Returns pending",
+                        "option_order": 4
+                    },
+                    {
+                        "id": 54,
+                        "option_text": "Substitution gaps",
+                        "option_order": 5
+                    },
+                    {
+                        "id": 55,
+                        "option_text": "Batch / expiry view",
+                        "option_order": 6
+                    },
+                    {
+                        "id": 56,
+                        "option_text": "High-value items",
+                        "option_order": 7
+                    }
+                ]
+            },
+            {
+                "id": 13,
+                "question_code": "P-I03",
+                "question_text": "Tell me about the last serious stockout and how you handled it.",
+                "question_type": "Open-ended",
+                "stage": "2. Inventory, expiry & daily stock position",
+                "section_theme": "Stockout, Expiry & Substitution",
+                "question_order": 13,
+                "options": [
+                    {
+                        "id": 57,
+                        "option_text": "Forecasting issue? Distributor delay? Cash constraint? | Signal: Exception-handling use case",
+                        "option_order": 1
+                    }
+                ]
+            },
+            {
+                "id": 14,
+                "question_code": "P-I04",
+                "question_text": "How do you identify products at risk of expiry?",
+                "question_type": "Open-ended",
+                "stage": "2. Inventory, expiry & daily stock position",
+                "section_theme": "Stockout, Expiry & Substitution",
+                "question_order": 14,
+                "options": [
+                    {
+                        "id": 58,
+                        "option_text": "How early do you notice? What happens to returns? | Signal: Expiry-risk model design",
+                        "option_order": 1
+                    }
+                ]
+            },
+            {
+                "id": 15,
+                "question_code": "P-I05",
+                "question_text": "How do you decide whether and what substitute to recommend?",
+                "question_type": "Open-ended",
+                "stage": "2. Inventory, expiry & daily stock position",
+                "section_theme": "Stockout, Expiry & Substitution",
+                "question_order": 15,
+                "options": [
+                    {
+                        "id": 59,
+                        "option_text": "Guided by salt, doctor habit, margin, or customer trust? | Signal: Recommendation safety",
+                        "option_order": 1
+                    }
+                ]
+            },
+            {
+                "id": 16,
+                "question_code": "P-I16",
+                "question_text": "Show me how you track daily opening stock, inward, sales, returns, expiries, substitutions, and closing stock.",
+                "question_type": "Open-ended",
+                "stage": "2. Inventory, expiry & daily stock position",
+                "section_theme": "Day-to-Day Stock Position",
+                "question_order": 16,
+                "options": [
+                    {
+                        "id": 60,
+                        "option_text": "What view would help you act faster on critical medicines and expiry risk? | Signal: Daily stock-position + expiry cockpit design",
+                        "option_order": 1
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "stage": "3. Demand planning, customer analytics & substitution",
+        "questions": [
+            {
+                "id": 17,
+                "question_code": "P-S09",
+                "question_text": "How do you decide reorder quantities?",
+                "question_type": "Multi select",
+                "stage": "3. Demand planning, customer analytics & substitution",
+                "section_theme": "Demand Planning & Substitution",
+                "question_order": 17,
+                "options": [
+                    {
+                        "id": 61,
+                        "option_text": "Owner judgment",
+                        "option_order": 1
+                    },
+                    {
+                        "id": 62,
+                        "option_text": "Software report",
+                        "option_order": 2
+                    },
+                    {
+                        "id": 63,
+                        "option_text": "Distributor recommendation",
+                        "option_order": 3
+                    },
+                    {
+                        "id": 64,
+                        "option_text": "Prescription pattern",
+                        "option_order": 4
+                    },
+                    {
+                        "id": 65,
+                        "option_text": "Seasonal illness",
+                        "option_order": 5
+                    },
+                    {
+                        "id": 66,
+                        "option_text": "Doctor demand",
+                        "option_order": 6
+                    },
+                    {
+                        "id": 67,
+                        "option_text": "Other",
+                        "option_order": 7
+                    }
+                ]
+            },
+            {
+                "id": 18,
+                "question_code": "P-S10",
+                "question_text": "How often do you place orders with distributors?",
+                "question_type": "Single select",
+                "stage": "3. Demand planning, customer analytics & substitution",
+                "section_theme": "Demand Planning & Substitution",
+                "question_order": 18,
+                "options": [
+                    {
+                        "id": 68,
+                        "option_text": "Daily",
+                        "option_order": 1
+                    },
+                    {
+                        "id": 69,
+                        "option_text": "2–3 times per week",
+                        "option_order": 2
+                    },
+                    {
+                        "id": 70,
+                        "option_text": "Weekly",
+                        "option_order": 3
+                    },
+                    {
+                        "id": 71,
+                        "option_text": "Fortnightly",
+                        "option_order": 4
+                    },
+                    {
+                        "id": 72,
+                        "option_text": "As needed",
+                        "option_order": 5
+                    }
+                ]
+            },
+            {
+                "id": 19,
+                "question_code": "P-S11",
+                "question_text": "How often do customers accept substitutes when Rx unavailable?",
+                "question_type": "Single select",
+                "stage": "3. Demand planning, customer analytics & substitution",
+                "section_theme": "Demand Planning & Substitution",
+                "question_order": 19,
+                "options": [
+                    {
+                        "id": 73,
+                        "option_text": "Almost always",
+                        "option_order": 1
+                    },
+                    {
+                        "id": 74,
+                        "option_text": "Often",
+                        "option_order": 2
+                    },
+                    {
+                        "id": 75,
+                        "option_text": "Sometimes",
+                        "option_order": 3
+                    },
+                    {
+                        "id": 76,
+                        "option_text": "Rarely",
+                        "option_order": 4
+                    },
+                    {
+                        "id": 77,
+                        "option_text": "Never",
+                        "option_order": 5
+                    }
+                ]
+            },
+            {
+                "id": 20,
+                "question_code": "P-S12",
+                "question_text": "What mainly drives substitute recommendations?",
+                "question_type": "Multi select",
+                "stage": "3. Demand planning, customer analytics & substitution",
+                "section_theme": "Demand Planning & Substitution",
+                "question_order": 20,
+                "options": [
+                    {
+                        "id": 78,
+                        "option_text": "Same salt",
+                        "option_order": 1
+                    },
+                    {
+                        "id": 79,
+                        "option_text": "Margin",
+                        "option_order": 2
+                    },
+                    {
+                        "id": 80,
+                        "option_text": "Availability",
+                        "option_order": 3
+                    },
+                    {
+                        "id": 81,
+                        "option_text": "Doctor preference",
+                        "option_order": 4
+                    },
+                    {
+                        "id": 82,
+                        "option_text": "Brand familiarity",
+                        "option_order": 5
+                    },
+                    {
+                        "id": 83,
+                        "option_text": "Customer affordability",
+                        "option_order": 6
+                    },
+                    {
+                        "id": 84,
+                        "option_text": "Other",
+                        "option_order": 7
+                    }
+                ]
+            },
+            {
+                "id": 21,
+                "question_code": "P-S19",
+                "question_text": "How do you identify repeat patients/customers and their regular medicine needs?",
+                "question_type": "Single select",
+                "stage": "3. Demand planning, customer analytics & substitution",
+                "section_theme": "Customer Analytics & Wishlist",
+                "question_order": 21,
+                "options": [
+                    {
+                        "id": 85,
+                        "option_text": "Mostly memory",
+                        "option_order": 1
+                    },
+                    {
+                        "id": 86,
+                        "option_text": "Prescription history",
+                        "option_order": 2
+                    },
+                    {
+                        "id": 87,
+                        "option_text": "Billing / pharmacy software",
+                        "option_order": 3
+                    },
+                    {
+                        "id": 88,
+                        "option_text": "WhatsApp / phone notes",
+                        "option_order": 4
+                    },
+                    {
+                        "id": 89,
+                        "option_text": "Family records",
+                        "option_order": 5
+                    },
+                    {
+                        "id": 90,
+                        "option_text": "No formal method",
+                        "option_order": 6
+                    }
+                ]
+            },
+            {
+                "id": 22,
+                "question_code": "P-S20",
+                "question_text": "What wishlist / unmet-demand signals do you capture from customers or prescriptions?",
+                "question_type": "Multi select",
+                "stage": "3. Demand planning, customer analytics & substitution",
+                "section_theme": "Customer Analytics & Wishlist",
+                "question_order": 22,
+                "options": [
+                    {
+                        "id": 91,
+                        "option_text": "Unavailable brand request",
+                        "option_order": 1
+                    },
+                    {
+                        "id": 92,
+                        "option_text": "Pack-size request",
+                        "option_order": 2
+                    },
+                    {
+                        "id": 93,
+                        "option_text": "Alternative / substitute request",
+                        "option_order": 3
+                    },
+                    {
+                        "id": 94,
+                        "option_text": "Wellness product asks",
+                        "option_order": 4
+                    },
+                    {
+                        "id": 95,
+                        "option_text": "Home delivery requests",
+                        "option_order": 5
+                    },
+                    {
+                        "id": 96,
+                        "option_text": "Doctor-specific demand",
+                        "option_order": 6
+                    },
+                    {
+                        "id": 97,
+                        "option_text": "No formal capture",
+                        "option_order": 7
+                    }
+                ]
+            },
+            {
+                "id": 23,
+                "question_code": "P-I14",
+                "question_text": "How do you identify repeat patients, doctor-driven demand, and items customers repeatedly ask for?",
+                "question_type": "Open-ended",
+                "stage": "3. Demand planning, customer analytics & substitution",
+                "section_theme": "Customer Analytics & Wishlist",
+                "question_order": 23,
+                "options": [
+                    {
+                        "id": 98,
+                        "option_text": "Do you use billing history, prescriptions, WhatsApp, medicine logs, or staff memory? | Signal: Customer analytics + demand sensing model",
+                        "option_order": 1
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "stage": "4. Compliance, distributor influence & capital management",
+        "questions": [
+            {
+                "id": 24,
+                "question_code": "P-S13",
+                "question_text": "How much do distributors influence stocking decisions? (1–5)",
+                "question_type": "5-point scale",
+                "stage": "4. Compliance, distributor influence & capital management",
+                "section_theme": "Compliance & Financial",
+                "question_order": 24,
+                "options": [
+                    {
+                        "id": 99,
+                        "option_text": "1 Not at all → 5 Very strongly",
+                        "option_order": 1
+                    }
+                ]
+            },
+            {
+                "id": 25,
+                "question_code": "P-S14",
+                "question_text": "How challenging is managing restricted/scheduled medicines? (1–5)",
+                "question_type": "5-point scale",
+                "stage": "4. Compliance, distributor influence & capital management",
+                "section_theme": "Compliance & Financial",
+                "question_order": 25,
+                "options": [
+                    {
+                        "id": 100,
+                        "option_text": "1 Not challenging → 5 Very challenging",
+                        "option_order": 1
+                    }
+                ]
+            },
+            {
+                "id": 26,
+                "question_code": "P-S15",
+                "question_text": "How easy is it to process returns for near-expiry items?",
+                "question_type": "Single select",
+                "stage": "4. Compliance, distributor influence & capital management",
+                "section_theme": "Compliance & Financial",
+                "question_order": 26,
+                "options": [
+                    {
+                        "id": 101,
+                        "option_text": "Very easy",
+                        "option_order": 1
+                    },
+                    {
+                        "id": 102,
+                        "option_text": "Somewhat easy",
+                        "option_order": 2
+                    },
+                    {
+                        "id": 103,
+                        "option_text": "Neutral",
+                        "option_order": 3
+                    },
+                    {
+                        "id": 104,
+                        "option_text": "Difficult",
+                        "option_order": 4
+                    },
+                    {
+                        "id": 105,
+                        "option_text": "Very difficult",
+                        "option_order": 5
+                    }
+                ]
+            },
+            {
+                "id": 27,
+                "question_code": "P-S16",
+                "question_text": "How often do margin/cash constraints affect stocking?",
+                "question_type": "Single select",
+                "stage": "4. Compliance, distributor influence & capital management",
+                "section_theme": "Compliance & Financial",
+                "question_order": 27,
+                "options": [
+                    {
+                        "id": 106,
+                        "option_text": "Always",
+                        "option_order": 1
+                    },
+                    {
+                        "id": 107,
+                        "option_text": "Often",
+                        "option_order": 2
+                    },
+                    {
+                        "id": 108,
+                        "option_text": "Sometimes",
+                        "option_order": 3
+                    },
+                    {
+                        "id": 109,
+                        "option_text": "Rarely",
+                        "option_order": 4
+                    },
+                    {
+                        "id": 110,
+                        "option_text": "Never",
+                        "option_order": 5
+                    }
+                ]
+            },
+            {
+                "id": 28,
+                "question_code": "P-S21",
+                "question_text": "Which working-capital support options do you use or want most?",
+                "question_type": "Multi select",
+                "stage": "4. Compliance, distributor influence & capital management",
+                "section_theme": "Capital Management & Funding",
+                "question_order": 28,
+                "options": [
+                    {
+                        "id": 111,
+                        "option_text": "Supplier credit",
+                        "option_order": 1
+                    },
+                    {
+                        "id": 112,
+                        "option_text": "Banker OD / CC",
+                        "option_order": 2
+                    },
+                    {
+                        "id": 113,
+                        "option_text": "NBFC short-term loan",
+                        "option_order": 3
+                    },
+                    {
+                        "id": 114,
+                        "option_text": "Invoice / receivable finance",
+                        "option_order": 4
+                    },
+                    {
+                        "id": 115,
+                        "option_text": "Family funds",
+                        "option_order": 5
+                    },
+                    {
+                        "id": 116,
+                        "option_text": "None",
+                        "option_order": 6
+                    }
+                ]
+            },
+            {
+                "id": 29,
+                "question_code": "P-S22",
+                "question_text": "How often do funding or cash constraints affect stocking of critical / fast-moving items?",
+                "question_type": "Single select",
+                "stage": "4. Compliance, distributor influence & capital management",
+                "section_theme": "Capital Management & Funding",
+                "question_order": 29,
+                "options": [
+                    {
+                        "id": 117,
+                        "option_text": "Daily",
+                        "option_order": 1
+                    },
+                    {
+                        "id": 118,
+                        "option_text": "Weekly",
+                        "option_order": 2
+                    },
+                    {
+                        "id": 119,
+                        "option_text": "2–3 times per month",
+                        "option_order": 3
+                    },
+                    {
+                        "id": 120,
+                        "option_text": "Rarely",
+                        "option_order": 4
+                    },
+                    {
+                        "id": 121,
+                        "option_text": "Never",
+                        "option_order": 5
+                    }
+                ]
+            },
+            {
+                "id": 30,
+                "question_code": "P-I06",
+                "question_text": "How much do nearby doctors/clinics influence what you stock?",
+                "question_type": "Open-ended",
+                "stage": "4. Compliance, distributor influence & capital management",
+                "section_theme": "External Influence & Compliance",
+                "question_order": 30,
+                "options": [
+                    {
+                        "id": 122,
+                        "option_text": "Products kept because of prescription patterns? | Signal: Local demand signal",
+                        "option_order": 1
+                    }
+                ]
+            },
+            {
+                "id": 31,
+                "question_code": "P-I07",
+                "question_text": "How do distributors/reps influence assortment and quantities?",
+                "question_type": "Open-ended",
+                "stage": "4. Compliance, distributor influence & capital management",
+                "section_theme": "External Influence & Compliance",
+                "question_order": 31,
+                "options": [
+                    {
+                        "id": 123,
+                        "option_text": "When do you follow or ignore their suggestions? | Signal: Counter supplier push",
+                        "option_order": 1
+                    }
+                ]
+            },
+            {
+                "id": 32,
+                "question_code": "P-I08",
+                "question_text": "What parts of compliance or schedule handling feel difficult?",
+                "question_type": "Open-ended",
+                "stage": "4. Compliance, distributor influence & capital management",
+                "section_theme": "External Influence & Compliance",
+                "question_order": 32,
+                "options": [
+                    {
+                        "id": 124,
+                        "option_text": "Restricted drugs, audit trails, expiry, batch tracking? | Signal: Compliance-aware design",
+                        "option_order": 1
+                    }
+                ]
+            },
+            {
+                "id": 33,
+                "question_code": "P-I09",
+                "question_text": "When cash is tight, how do your stocking choices change?",
+                "question_type": "Open-ended",
+                "stage": "4. Compliance, distributor influence & capital management",
+                "section_theme": "External Influence & Compliance",
+                "question_order": 33,
+                "options": [
+                    {
+                        "id": 125,
+                        "option_text": "Reduce depth? Stop low-margin SKUs? Delay replenishment? | Signal: Financial constraint model",
+                        "option_order": 1
+                    }
+                ]
+            },
+            {
+                "id": 34,
+                "question_code": "P-I15",
+                "question_text": "When cash is tight, what banking / NBFC / supplier-credit support would help most without hurting availability?",
+                "question_type": "Open-ended",
+                "stage": "4. Compliance, distributor influence & capital management",
+                "section_theme": "Capital Management & Funding",
+                "question_order": 34,
+                "options": [
+                    {
+                        "id": 126,
+                        "option_text": "Which products get protected first? What finance support is realistic? | Signal: Funding-led replenishment model",
+                        "option_order": 1
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "stage": "5. Digital readiness, trust & AI adoption",
+        "questions": [
+            {
+                "id": 35,
+                "question_code": "P-S17",
+                "question_text": "Which systems do you use regularly?",
+                "question_type": "Multi select",
+                "stage": "5. Digital readiness, trust & AI adoption",
+                "section_theme": "Digital & AI Adoption",
+                "question_order": 35,
+                "options": [
+                    {
+                        "id": 127,
+                        "option_text": "Pharmacy ERP",
+                        "option_order": 1
+                    },
+                    {
+                        "id": 128,
+                        "option_text": "Tally",
+                        "option_order": 2
+                    },
+                    {
+                        "id": 129,
+                        "option_text": "Excel",
+                        "option_order": 3
+                    },
+                    {
+                        "id": 130,
+                        "option_text": "Distributor app",
+                        "option_order": 4
+                    },
+                    {
+                        "id": 131,
+                        "option_text": "WhatsApp",
+                        "option_order": 5
+                    },
+                    {
+                        "id": 132,
+                        "option_text": "UPI / banking",
+                        "option_order": 6
+                    },
+                    {
+                        "id": 133,
+                        "option_text": "None",
+                        "option_order": 7
+                    },
+                    {
+                        "id": 134,
+                        "option_text": "Other",
+                        "option_order": 8
+                    }
+                ]
+            },
+            {
+                "id": 36,
+                "question_code": "P-S18",
+                "question_text": "Which AI outputs would be most valuable? (Rank top 3)",
+                "question_type": "Rank top 3",
+                "stage": "5. Digital readiness, trust & AI adoption",
+                "section_theme": "Digital & AI Adoption",
+                "question_order": 36,
+                "options": [
+                    {
+                        "id": 135,
+                        "option_text": "What to reorder",
+                        "option_order": 1
+                    },
+                    {
+                        "id": 136,
+                        "option_text": "How much to reorder",
+                        "option_order": 2
+                    },
+                    {
+                        "id": 137,
+                        "option_text": "Near-expiry alerts",
+                        "option_order": 3
+                    },
+                    {
+                        "id": 138,
+                        "option_text": "Substitute suggestions",
+                        "option_order": 4
+                    },
+                    {
+                        "id": 139,
+                        "option_text": "Fast/slow mover insights",
+                        "option_order": 5
+                    },
+                    {
+                        "id": 140,
+                        "option_text": "Margin optimization",
+                        "option_order": 6
+                    },
+                    {
+                        "id": 141,
+                        "option_text": "Demand forecasting",
+                        "option_order": 7
+                    }
+                ]
+            },
+            {
+                "id": 37,
+                "question_code": "P-I10",
+                "question_text": "Show me systems you use for billing, stock, and reporting.",
+                "question_type": "Open-ended",
+                "stage": "5. Digital readiness, trust & AI adoption",
+                "section_theme": "Systems, Trust & Success",
+                "question_order": 39,
+                "options": [
+                    {
+                        "id": 142,
+                        "option_text": "What data is accurate? What is incomplete? | Signal: Integration feasibility",
+                        "option_order": 1
+                    }
+                ]
+            },
+            {
+                "id": 38,
+                "question_code": "P-I11",
+                "question_text": "What would make you trust an AI recommendation in pharmacy?",
+                "question_type": "Open-ended",
+                "stage": "5. Digital readiness, trust & AI adoption",
+                "section_theme": "Systems, Trust & Success",
+                "question_order": 40,
+                "options": [
+                    {
+                        "id": 143,
+                        "option_text": "Need reasons, clinical caution, revenue/expiry impact? | Signal: Explainability & guardrails",
+                        "option_order": 1
+                    }
+                ]
+            },
+            {
+                "id": 39,
+                "question_code": "P-I12",
+                "question_text": "At what point in the workflow would an assistant be most useful?",
+                "question_type": "Open-ended",
+                "stage": "5. Digital readiness, trust & AI adoption",
+                "section_theme": "Systems, Trust & Success",
+                "question_order": 41,
+                "options": [
+                    {
+                        "id": 144,
+                        "option_text": "During ordering? Billing? End-of-day review? | Signal: Notification timing",
+                        "option_order": 1
+                    }
+                ]
+            },
+            {
+                "id": 40,
+                "question_code": "P-I13",
+                "question_text": "If this tool worked well, what would improve first?",
+                "question_type": "Open-ended",
+                "stage": "5. Digital readiness, trust & AI adoption",
+                "section_theme": "Systems, Trust & Success",
+                "question_order": 42,
+                "options": [
+                    {
+                        "id": 145,
+                        "option_text": "Fewer stockouts, less expiry loss, better turns, faster replenishment? | Signal: Pilot KPIs",
+                        "option_order": 1
+                    }
+                ]
+            }
+        ]
+    }
+]
