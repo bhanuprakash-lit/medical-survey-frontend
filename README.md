@@ -30,16 +30,22 @@ http://127.0.0.1:5173
 
 ## Backend Proxy
 
-The Vite dev server proxies API calls to the FastAPI backend:
+The frontend reads the backend URL from `VITE_API_BASE_URL`. If it is not set, it defaults to:
 
 ```text
-http://localhost:8000
+https://medical-survey-backend.onrender.com
 ```
 
 Configured endpoints are in:
 
 ```text
 src/config/api.js
+```
+
+For local development, create a local environment file:
+
+```text
+VITE_API_BASE_URL=http://localhost:8000
 ```
 
 ## Main Flow

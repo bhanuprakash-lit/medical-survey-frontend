@@ -3,7 +3,8 @@
  * Centralized location for backend URLs and endpoints.
  */
 
-export const API_BASE_URL = '';
+export const API_BASE_URL =
+  import.meta.env.VITE_API_BASE_URL || 'https://medical-survey-backend.onrender.com';
 export const AUTH_STORAGE_KEY = 'kirana-ai-auth-v1';
 
 export const getAuthToken = () => {
