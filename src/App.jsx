@@ -476,6 +476,13 @@ function App() {
     }
   };
 
+  const handleEndSurvey = () => {
+    if (window.confirm('Are you sure you want to end this survey? Your current progress for this outlet will be lost.')) {
+      resetSurvey();
+      setFlowStep('store');
+    }
+  };
+
   // Resets all survey state and clears drafts
   const resetSurvey = () => {
     removeDraft(DRAFT_KEY);
@@ -763,6 +770,7 @@ function App() {
               isSummaryOpen={isSummaryOpen}
               onPrevious={goToPrevious}
               onNext={goToNext}
+              onEndSurvey={handleEndSurvey}
               onOpenSummary={() => setIsSummaryOpen(true)}
               onBackFromSummary={() => setIsSummaryOpen(false)}
               onSubmit={() => {

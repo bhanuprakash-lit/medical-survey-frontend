@@ -12,6 +12,7 @@ const ProgressFooter = ({
   isSummaryOpen,  // Boolean to toggle between question navigation and submission
   onPrevious,
   onNext,
+  onEndSurvey,
   onOpenSummary,
   onBackFromSummary,
   onSubmit,
@@ -25,10 +26,20 @@ const ProgressFooter = ({
       <div className="pointer-events-auto mx-auto flex max-w-[430px] flex-col gap-2 rounded-lg border border-slate-100 bg-white/96 p-2 shadow-[0_-10px_28px_-24px_rgba(15,35,63,0.32)] backdrop-blur-xl">
         
         {/* Status Label (Draft Save Status or Instructions) */}
-        <div className="px-1 text-center text-[11px] font-semibold text-slate-500">
-          {isSummaryOpen
-            ? 'Check any missing required answers before submitting.'
-            : saveStatus}
+        <div className="flex items-center justify-between px-2 text-[11px] font-semibold text-slate-500">
+          <div>
+            {isSummaryOpen
+              ? 'Check any missing required answers before submitting.'
+              : saveStatus}
+          </div>
+          {!isSummaryOpen && (
+            <button 
+              onClick={onEndSurvey}
+              className="text-red-500 hover:text-red-600 transition-colors uppercase tracking-wider text-[10px] font-bold"
+            >
+              Quit Survey
+            </button>
+          )}
         </div>
 
         <div className="flex gap-3">
