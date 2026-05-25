@@ -78,8 +78,9 @@ const StoreDetails = ({ surveyorId, surveyorName, onComplete }) => {
         
         try {
           // Attempt reverse geocoding using Nominatim (OpenStreetMap)
+          // zoom=18 gives building/house level precision
           const response = await fetch(
-            `https://nominatim.openstreetmap.org/reverse?format=jsonv2&lat=${latitude}&lon=${longitude}`,
+            `https://nominatim.openstreetmap.org/reverse?format=jsonv2&lat=${latitude}&lon=${longitude}&zoom=18&addressdetails=1`,
             {
               headers: {
                 'Accept-Language': 'en',
@@ -90,8 +91,35 @@ const StoreDetails = ({ surveyorId, surveyorName, onComplete }) => {
           
           if (response.ok) {
             const data = await response.json();
-            const address = data.display_name || coordsString;
-            setFormData((prev) => ({ ...prev, storeLocation: address }));
+            const addr = data.address || {};
+            
+            // Build a cleaner, Google-like address from components
+            const parts = [];
+            
+            // 1. Specific Location (Building/Shop/House Number)
+            const specific = addr.building || addr.amenity || addr.shop || addr.house_number;
+            if (specific) parts.push(specific);
+            
+            // 2. Road/Street
+            if (addr.road) parts.push(addr.road);
+            
+            // 3. Locality/Suburb/Neighborhood
+            const local = addr.suburb || addr.neighbourhood || addr.neighbourhood || addr.city_district;
+            if (local) parts.push(local);
+            
+            // 4. City
+            const city = addr.city || addr.town || addr.village;
+            if (city) parts.push(city);
+            
+            // If we have parts, join them. Otherwise fallback to display_name or coords
+            let cleanedAddress = parts.length > 0 ? parts.join(', ') : data.display_name;
+            
+            // If still empty or too short, use display_name but try to trim the end (country/zip)
+            if (!cleanedAddress || cleanedAddress.length < 5) {
+              cleanedAddress = data.display_name;
+            }
+
+            setFormData((prev) => ({ ...prev, storeLocation: cleanedAddress }));
           } else {
             setFormData((prev) => ({ ...prev, storeLocation: coordsString }));
           }
