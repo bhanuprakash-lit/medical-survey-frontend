@@ -72,11 +72,35 @@ const StoreDetails = ({ surveyorId, surveyorName, onComplete }) => {
     setErrors((prev) => ({ ...prev, storeLocation: '' }));
 
     navigator.geolocation.getCurrentPosition(
-      (position) => {
+      async (position) => {
         const { latitude, longitude } = position.coords;
-        const locationString = `${latitude.toFixed(6)}, ${longitude.toFixed(6)}`;
-        setFormData((prev) => ({ ...prev, storeLocation: locationString }));
-        setLocating(false);
+        const coordsString = `${latitude.toFixed(6)}, ${longitude.toFixed(6)}`;
+        
+        try {
+          // Attempt reverse geocoding using Nominatim (OpenStreetMap)
+          const response = await fetch(
+            `https://nominatim.openstreetmap.org/reverse?format=jsonv2&lat=${latitude}&lon=${longitude}`,
+            {
+              headers: {
+                'Accept-Language': 'en',
+                'User-Agent': 'Medical-AI-Survey-App'
+              }
+            }
+          );
+          
+          if (response.ok) {
+            const data = await response.json();
+            const address = data.display_name || coordsString;
+            setFormData((prev) => ({ ...prev, storeLocation: address }));
+          } else {
+            setFormData((prev) => ({ ...prev, storeLocation: coordsString }));
+          }
+        } catch (err) {
+          console.error('Geocoding error:', err);
+          setFormData((prev) => ({ ...prev, storeLocation: coordsString }));
+        } finally {
+          setLocating(false);
+        }
       },
       (error) => {
         console.error('Location error:', error);
