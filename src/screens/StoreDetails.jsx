@@ -1,7 +1,7 @@
 import { useState, useMemo } from 'react';
 import Input from '../components/Input';
 import Button from '../components/Button';
-import { ENDPOINTS, authHeaders } from '../config/api';
+import { ENDPOINTS, authHeaders, adminAuthHeaders } from '../config/api';
 import './Screens.css'; // Using the unified stylesheet
 
 const ACTIVE_SESSION_KEY = 'kirana-ai-active-session';
@@ -128,13 +128,19 @@ const StoreDetails = ({ surveyorId, surveyorName, onComplete }) => {
     setLoading(true);
 
     try {
+      // Use surveyor headers first, fallback to admin headers for store registration
+      const sHeaders = authHeaders();
+      const aHeaders = adminAuthHeaders();
+      const headers = Object.keys(sHeaders).length > 0 ? sHeaders : aHeaders;
+
       // 2. Register/Save Store
       const storeResponse = await fetch(ENDPOINTS.SAVE_STORE, {
         method: 'POST',
-        headers: authHeaders({
+        headers: {
+          ...headers,
           'Content-Type': 'application/json',
           'Accept': 'application/json',
-        }),
+        },
         body: JSON.stringify({
           store_name: formData.storeName,
           store_location: formData.storeLocation,
@@ -144,9 +150,9 @@ const StoreDetails = ({ surveyorId, surveyorName, onComplete }) => {
       });
 
       if (!storeResponse.ok) {
-        const errorData = await storeResponse.json();
+        const errorData = await storeResponse.json().catch(() => ({}));
         console.error('API Error:', errorData);
-        setStatusMessage('We could not save the store details right now. Please try again.');
+        setStatusMessage(errorData.detail || 'We could not save the store details right now. Please try again.');
         return;
       }
 
@@ -162,10 +168,11 @@ const StoreDetails = ({ surveyorId, surveyorName, onComplete }) => {
       // 3. Start Survey Session
       const sessionResponse = await fetch(ENDPOINTS.START_SURVEY_SESSION, {
         method: 'POST',
-        headers: authHeaders({
+        headers: {
+          ...headers,
           'Content-Type': 'application/json',
           'Accept': 'application/json',
-        }),
+        },
         body: JSON.stringify({
           surveyor_id: surveyorId,
           store_id: storeId,
@@ -173,9 +180,9 @@ const StoreDetails = ({ surveyorId, surveyorName, onComplete }) => {
       });
 
       if (!sessionResponse.ok) {
-        const errorData = await sessionResponse.json();
+        const errorData = await sessionResponse.json().catch(() => ({}));
         console.error('Session API Error:', errorData);
-        setStatusMessage('Store was saved, but the survey session could not be started. Please try again.');
+        setStatusMessage(errorData.detail || 'Store was saved, but the survey session could not be started. Please try again.');
         return;
       }
 

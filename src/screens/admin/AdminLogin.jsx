@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import Input from '../../components/Input';
 import Button from '../../components/Button';
+import { ENDPOINTS, ADMIN_AUTH_STORAGE_KEY } from '../../config/api';
 import '../Screens.css';
 
 const AdminLogin = ({ onLogin, onBack }) => {
@@ -22,16 +23,33 @@ const AdminLogin = ({ onLogin, onBack }) => {
     setLoading(true);
     setError('');
 
-    // For now, using a simple hardcoded check. 
-    // This can be replaced with a real API call to /api/admin/login if available.
-    setTimeout(() => {
-      if (formData.username === 'admin' && formData.password === 'admin123') {
-        onLogin();
-      } else {
-        setError('Invalid admin credentials. Please try again.');
+    try {
+      const response = await fetch(ENDPOINTS.LOGIN_ADMIN, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          username: formData.username,
+          password: formData.password,
+        }),
+      });
+
+      if (!response.ok) {
+        const errorData = await response.json().catch(() => ({}));
+        throw new Error(errorData.detail || 'Invalid admin credentials');
       }
+
+      const data = await response.json();
+      window.localStorage.setItem(ADMIN_AUTH_STORAGE_KEY, JSON.stringify({
+        token: data.token,
+        loggedInAt: new Date().toISOString()
+      }));
+      
+      onLogin();
+    } catch (err) {
+      setError(err.message);
+    } finally {
       setLoading(false);
-    }, 800);
+    }
   };
 
   return (

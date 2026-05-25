@@ -14,7 +14,7 @@ import {
   SuccessState,
 } from './components/survey/SurveyStates';
 import MobileLayout from './layouts/MobileLayout';
-import { AUTH_STORAGE_KEY, ENDPOINTS, authHeaders } from './config/api';
+import { AUTH_STORAGE_KEY, ADMIN_AUTH_STORAGE_KEY, ENDPOINTS, authHeaders } from './config/api';
 import SurveyTaker from './screens/SurveyTaker';
 import StoreDetails from './screens/StoreDetails';
 import {
@@ -87,7 +87,14 @@ function App() {
   
   // --- State: Admin Management ---
   const [isAdminView, setIsAdminView] = useState(false);
-  const [isAdminAuthenticated, setIsAdminAuthenticated] = useState(false);
+  const [isAdminAuthenticated, setIsAdminAuthenticated] = useState(() => {
+    try {
+      const stored = window.localStorage.getItem(ADMIN_AUTH_STORAGE_KEY);
+      return !!stored;
+    } catch (e) {
+      return false;
+    }
+  });
 
   // Simple URL routing for Admin access
   useEffect(() => {
@@ -607,6 +614,7 @@ function App() {
     return <SubmissionsDashboard onBack={() => {
       setIsAdminView(false);
       setIsAdminAuthenticated(false);
+      window.localStorage.removeItem(ADMIN_AUTH_STORAGE_KEY);
       window.history.pushState({}, '', '/');
     }} />;
   }
